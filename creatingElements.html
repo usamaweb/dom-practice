@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Elements</title>
+</head>
+<body>
+    <p class="message">This is a paragraph</p>
+    
+    <script>
+        const bodyElement = document.body
+        const paraElement = document.querySelector('.message')
+
+        function addP() {
+            const clonedNode = paraElement.cloneNode(true)
+            bodyElement.appendChild(clonedNode)
+        }
+
+        // setInterval(addP, 1000)
+
+
+
+        bodyElement.appendChild(document.createElement('p')).textContent = 'This is a new paragraph' 
+        bodyElement.appendChild(document.createElement('p')).textContent = 'This is 2nd new paragraph' 
+
+    </script>
+
+</body>
+</html>
